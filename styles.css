@@ -1,145 +1,138 @@
 :root {
-  --bg: #071a33;          /* dark blue background */
-  --box: #8d8d8d;         /* grey boxes like your mockup */
-  --text: #e9eef7;
-  --muted: rgba(233, 238, 247, 0.75);
+  --bg-dark: #071a33;      /* outer background */
+  --bg-center: #1f2db3;   /* brighter center */
+  --text-gray: #9aa0a6;   /* text color */
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--bg);
-  color: var(--text);
+  background: var(--bg-dark);
+  color: var(--text-gray);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Top layout: centered header + nav on right */
+/* Center column */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--bg-center);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top layout */
 .topbar {
   position: relative;
-  height: 140px;          /* gives that empty space above hero */
+  height: 140px;
   padding: 26px 36px;
 }
 
-/* Center "Header" box */
+/* Header (centered) */
 .header-box {
   position: absolute;
   left: 50%;
   top: 26px;
   transform: translateX(-50%);
-  background: var(--box);
-  color: #0b0b0b;
-  padding: 22px 90px;
-  font-size: 44px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 600;
   letter-spacing: 0.5px;
 }
 
-/* Nav box on right */
+/* Navigation (top right) */
 .nav-box {
   position: absolute;
   right: 36px;
-  top: 28px;
-  background: var(--box);
-  padding: 14px 18px;
+  top: 30px;
   display: flex;
-  gap: 14px;
-  align-items: center;
-  color: #0b0b0b;
-  font-weight: 700;
+  gap: 16px;
 }
 
 .nav-box a {
-  color: #0b0b0b;
+  color: var(--text-gray);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .nav-box a:hover {
   text-decoration: underline;
 }
 
-/* Center hero stack */
+/* Hero section */
 .hero {
-  min-height: calc(100vh - 140px);
+  flex: 1;
   display: grid;
   place-items: center;
   text-align: center;
   padding: 40px 18px 90px;
-  gap: 18px;
+  gap: 20px;
+  position: relative;
 }
 
-/* Boxes matching your mockup */
+/* Subtle vertical lines */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-50%);
+}
+
+.hero::before {
+  left: 18%;
+}
+
+.hero::after {
+  right: 18%;
+}
+
+/* Text styles */
 .headline {
   margin: 0;
-  background: var(--box);
-  color: #0b0b0b;
-  padding: 26px 120px;
-  font-size: 72px;
-  font-weight: 800;
+  font-size: 64px;
+  font-weight: 700;
 }
 
 .description {
-  margin: 0;
-  background: var(--box);
-  color: #0b0b0b;
-  padding: 18px 90px;
-  font-size: 34px;
-  font-weight: 600;
-  max-width: 900px;
+  max-width: 720px;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .cta {
-  display: inline-block;
-  background: var(--box);
-  color: #0b0b0b;
-  padding: 14px 54px;
-  font-size: 34px;
-  font-weight: 800;
-  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-gray);
+  text-decoration: underline;
 }
 
 .cta:hover {
-  filter: brightness(0.95);
+  opacity: 0.85;
 }
 
-/* Optional content sections below */
-.section {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 18px;
-  color: var(--text);
-}
-
-.section h2 {
-  margin: 0 0 10px;
-}
-
-.section p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.footer {
-  padding: 24px 18px;
-  text-align: center;
-  color: var(--muted);
-}
-
-/* Mobile adjustments so boxes don’t overflow */
+/* Mobile tweaks */
 @media (max-width: 720px) {
-  .topbar { height: 170px; }
+  .headline {
+    font-size: 42px;
+  }
 
-  .header-box {
-    padding: 18px 44px;
-    font-size: 36px;
-    top: 18px;
+  .hero::before,
+  .hero::after {
+    display: none;
   }
 
   .nav-box {
-    top: 92px;
+    top: 90px;
     right: 18px;
     left: 18px;
-    justify
+    justify-content: center;
+  }
+}
