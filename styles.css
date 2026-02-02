@@ -1,0 +1,145 @@
+:root {
+  --bg: #071a33;          /* dark blue background */
+  --box: #8d8d8d;         /* grey boxes like your mockup */
+  --text: #e9eef7;
+  --muted: rgba(233, 238, 247, 0.75);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Top layout: centered header + nav on right */
+.topbar {
+  position: relative;
+  height: 140px;          /* gives that empty space above hero */
+  padding: 26px 36px;
+}
+
+/* Center "Header" box */
+.header-box {
+  position: absolute;
+  left: 50%;
+  top: 26px;
+  transform: translateX(-50%);
+  background: var(--box);
+  color: #0b0b0b;
+  padding: 22px 90px;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Nav box on right */
+.nav-box {
+  position: absolute;
+  right: 36px;
+  top: 28px;
+  background: var(--box);
+  padding: 14px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: #0b0b0b;
+  font-weight: 700;
+}
+
+.nav-box a {
+  color: #0b0b0b;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-box a:hover {
+  text-decoration: underline;
+}
+
+/* Center hero stack */
+.hero {
+  min-height: calc(100vh - 140px);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 40px 18px 90px;
+  gap: 18px;
+}
+
+/* Boxes matching your mockup */
+.headline {
+  margin: 0;
+  background: var(--box);
+  color: #0b0b0b;
+  padding: 26px 120px;
+  font-size: 72px;
+  font-weight: 800;
+}
+
+.description {
+  margin: 0;
+  background: var(--box);
+  color: #0b0b0b;
+  padding: 18px 90px;
+  font-size: 34px;
+  font-weight: 600;
+  max-width: 900px;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--box);
+  color: #0b0b0b;
+  padding: 14px 54px;
+  font-size: 34px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.cta:hover {
+  filter: brightness(0.95);
+}
+
+/* Optional content sections below */
+.section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 18px;
+  color: var(--text);
+}
+
+.section h2 {
+  margin: 0 0 10px;
+}
+
+.section p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.footer {
+  padding: 24px 18px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Mobile adjustments so boxes don’t overflow */
+@media (max-width: 720px) {
+  .topbar { height: 170px; }
+
+  .header-box {
+    padding: 18px 44px;
+    font-size: 36px;
+    top: 18px;
+  }
+
+  .nav-box {
+    top: 92px;
+    right: 18px;
+    left: 18px;
+    justify

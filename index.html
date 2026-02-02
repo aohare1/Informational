@@ -1,11 +1,64 @@
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Informational</h1>
-    <p>Informational website</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Dev Guide</title>
+    <meta
+      name="description"
+      content="Game development concepts, tools, and engines explained simply."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="header-box">Header</div>
+
+      <nav class="nav-box" aria-label="Primary">
+        <a href="#concepts">Concepts</a>
+        <a href="#tools">Tools</a>
+        <a href="#engines">Engines</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <main class="hero">
+      <h1 class="headline">Headline</h1>
+      <p class="description">
+        A simple, organized guide to game development: concepts, tools, engines,
+        programming, and how to go from idea → finished game.
+      </p>
+      <a class="cta" href="#roadmap">Call To Action</a>
+    </main>
+
+    <!-- Sections (optional, but useful) -->
+    <section id="concepts" class="section">
+      <h2>Concepts</h2>
+      <p>Gameplay loop, mechanics, level design, UI, player feedback, and more.</p>
+    </section>
+
+    <section id="tools" class="section">
+      <h2>Tools</h2>
+      <p>Version control, art/audio pipelines, debugging, profiling, build tools.</p>
+    </section>
+
+    <section id="engines" class="section">
+      <h2>Engines</h2>
+      <p>Unity, Unreal, Godot, and when to use each.</p>
+    </section>
+
+    <section id="roadmap" class="section">
+      <h2>Roadmap</h2>
+      <p>Idea → prototype → core loop → content → polish → release.</p>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Game Dev Guide</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
