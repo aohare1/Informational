@@ -19,7 +19,6 @@ body {
   font-size: 18px;
 }
 
-/* Header & Nav */
 .topbar {
   position: relative;
   height: 140px;
@@ -52,7 +51,6 @@ body {
   color: var(--accent);
 }
 
-/* Hero */
 .hero {
   min-height: calc(100vh - 140px);
   display: grid;
@@ -89,7 +87,6 @@ body {
   opacity: 0.85;
 }
 
-/* Sections */
 .section {
   max-width: 960px;
   margin: 0 auto;
@@ -131,7 +128,6 @@ img {
   margin-top: 12px;
 }
 
-/* Form */
 form {
   display: flex;
   flex-direction: column;
@@ -160,14 +156,12 @@ button:hover {
   opacity: 0.9;
 }
 
-/* Footer */
 .footer {
   padding: 24px 18px;
   text-align: center;
   color: var(--muted);
 }
 
-/* Mobile */
 @media (max-width: 720px) {
   .topbar { height: 170px; }
   .header-box .logo-link { font-size: 36px; }

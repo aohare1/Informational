@@ -1,7 +1,5 @@
-// Auto-update year in footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Contact form submission
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
   const name = document.getElementById("name").value.trim();
@@ -15,7 +13,6 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     return;
   }
 
-  // Simulate successful submission
   formMessage.textContent = "Thanks! Your message has been sent.";
   formMessage.style.color = "green";
   this.reset();
