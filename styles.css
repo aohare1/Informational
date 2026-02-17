@@ -1,8 +1,8 @@
 :root {
-  --bg: #071a33;          /* dark blue background */
-  --box: #8d8d8d;         /* (kept, but no longer used for text) */
+  --bg: #071a33; 
   --text: #e9eef7;
-  --muted: rgba(233, 238, 247, 0.75);
+  --muted: rgba(233, 238, 247, 0.85);
+  --accent: #ff9900;
 }
 
 * {
@@ -15,52 +15,44 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
 }
 
-/* Top layout: centered header + nav on right */
+/* Header & Nav */
 .topbar {
   position: relative;
   height: 140px;
   padding: 26px 36px;
 }
 
-/* Center Header text */
-.header-box {
-  position: absolute;
-  left: 50%;
-  top: 26px;
-  transform: translateX(-50%);
+.header-box .logo-link {
   color: var(--text);
-  padding: 22px 90px;
   font-size: 44px;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
-/* Navigation on right */
 .nav-box {
   position: absolute;
   right: 36px;
   top: 28px;
-  padding: 14px 18px;
   display: flex;
   gap: 14px;
-  align-items: center;
-  color: var(--text);
   font-weight: 700;
 }
 
 .nav-box a {
   color: var(--text);
   text-decoration: none;
-  font-weight: 700;
 }
 
 .nav-box a:hover {
   text-decoration: underline;
+  color: var(--accent);
 }
 
-/* Center hero stack */
+/* Hero */
 .hero {
   min-height: calc(100vh - 140px);
   display: grid;
@@ -70,29 +62,23 @@ body {
   gap: 18px;
 }
 
-/* Headline */
 .headline {
   margin: 0;
-  color: var(--text);
-  padding: 26px 120px;
   font-size: 72px;
   font-weight: 800;
 }
 
-/* Description */
 .description {
   margin: 0;
-  color: var(--text);
-  padding: 18px 90px;
   font-size: 34px;
   font-weight: 600;
   max-width: 900px;
+  color: var(--muted);
 }
 
-/* Call to action */
 .cta {
   display: inline-block;
-  color: var(--text);
+  color: var(--accent);
   padding: 14px 54px;
   font-size: 34px;
   font-weight: 800;
@@ -103,60 +89,89 @@ body {
   opacity: 0.85;
 }
 
-/* Optional content sections below */
+/* Sections */
 .section {
   max-width: 960px;
   margin: 0 auto;
   padding: 40px 18px;
-  color: var(--text);
 }
 
 .section h2 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .section p {
-  margin: 0;
   color: var(--muted);
-  line-height: 1.5;
 }
 
+.section ul,
+.section ol {
+  margin: 12px 0 12px 24px;
+}
+
+.section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+table, th, td {
+  border: 1px solid var(--muted);
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  color: var(--muted);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 12px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+}
+
+label {
+  font-weight: 700;
+}
+
+input, textarea, button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background: var(--accent);
+  color: #071a33;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
 .footer {
   padding: 24px 18px;
   text-align: center;
   color: var(--muted);
 }
 
-/* Mobile adjustments */
+/* Mobile */
 @media (max-width: 720px) {
-  .topbar {
-    height: 170px;
-  }
-
-  .header-box {
-    padding: 18px 44px;
-    font-size: 36px;
-    top: 18px;
-  }
-
-  .nav-box {
-    top: 92px;
-    right: 18px;
-    left: 18px;
-    justify-content: center;
-  }
-
-  .headline {
-    font-size: 42px;
-    padding: 18px 24px;
-  }
-
-  .description {
-    font-size: 20px;
-    padding: 12px 24px;
-  }
-
-  .cta {
-    font-size: 20px;
-  }
+  .topbar { height: 170px; }
+  .header-box .logo-link { font-size: 36px; }
+  .nav-box { top: 92px; justify-content: center; left: 18px; right: 18px; }
+  .headline { font-size: 42px; }
+  .description, .cta { font-size: 20px; }
 }
