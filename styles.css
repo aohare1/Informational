@@ -4,7 +4,7 @@
   --muted: rgba(233, 238, 247, 0.85);
   --accent: #4db8ff;
   --card-bg: rgba(255, 255, 255, 0.04);
-  --card-border: rgba(77, 184, 255, 0.25);
+  --card-border: rgba(77, 184, 255, 0.24);
 }
 
 * {
