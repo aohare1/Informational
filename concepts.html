@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concepts | Game Dev Guide</title>
+    <meta name="description" content="Learn core game development concepts: gameplay loops, mechanics, level design, UI/UX, and player feedback systems." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="header-box">
+        <a href="index.html" class="logo-link">Game Dev Guide</a>
+      </div>
+      <nav class="nav-box" aria-label="Primary Navigation">
+        <a href="concepts.html" class="active">Concepts</a>
+        <a href="tools.html">Tools</a>
+        <a href="engines.html">Engines</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="index.html#resources">Resources</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <h1>Game Design Concepts</h1>
+        <p class="page-subtitle">The building blocks every game developer needs to understand before writing a single line of code.</p>
+      </section>
+
+      <section class="section">
+        <h2>What Is a Game Loop?</h2>
+        <p>The game loop is the heartbeat of every game. It runs continuously, processing input, updating the game state, and rendering the scene — typically 30 to 60+ times per second.</p>
+        <ul>
+          <li><strong>Input:</strong> Read player input (keyboard, mouse, controller)</li>
+          <li><strong>Update:</strong> Move characters, check collisions, run game logic</li>
+          <li><strong>Render:</strong> Draw the current frame to the screen</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Core Mechanics</h2>
+        <p>Mechanics are the rules and systems that define how a player interacts with your game. Great mechanics are easy to learn and hard to master.</p>
+        <ul>
+          <li>Movement & physics</li>
+          <li>Combat & collision</li>
+          <li>Resource management</li>
+          <li>Progression & rewards</li>
+        </ul>
+        <img
+          src="https://www.artemisiacollege.com/wp-content/uploads/2025/07/Game-Design-Process-From-Idea-to-Prototype-1024x576.png"
+          alt="Game design process from idea to prototype diagram"
+        />
+      </section>
+
+      <section class="section">
+        <h2>Level Design & Pacing</h2>
+        <p>Level design shapes the player's journey. Good levels guide players naturally, introduce new mechanics gradually, and balance challenge with reward.</p>
+        <ul>
+          <li>Introduce → challenge → reward cycles</li>
+          <li>Environmental storytelling</li>
+          <li>Flow theory: keeping players in the "zone"</li>
+          <li>Difficulty curves and checkpointing</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>UI/UX in Games</h2>
+        <p>Game UI and UX determine how players interact with your game's systems. Good game UI is either invisible or intuitive.</p>
+        <ul>
+          <li><strong>Diegetic UI:</strong> In-world elements (e.g., a health bar on a character's chest)</li>
+          <li><strong>Non-diegetic UI:</strong> HUD overlays (minimap, health bar, ammo)</li>
+          <li><strong>Menus & inventory:</strong> Clarity and readability are key</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Player Feedback</h2>
+        <p>Feedback is how you communicate the game state to the player. Strong feedback makes every action feel satisfying.</p>
+        <ul>
+          <li>Visual effects: hit flashes, screen shake</li>
+          <li>Sound design: footsteps, impact sounds</li>
+          <li>Haptic feedback on controllers</li>
+          <li>Particle systems and juice</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Concepts at a Glance</h2>
+        <table>
+          <caption>Key Game Design Concepts Summary</caption>
+          <thead>
+            <tr>
+              <th>Concept</th>
+              <th>Why It Matters</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Game Loop</td>
+              <td>Foundation of all real-time games</td>
+              <td>Update/render cycle in Unity</td>
+            </tr>
+            <tr>
+              <td>Core Mechanics</td>
+              <td>Defines player interaction</td>
+              <td>Jump mechanic in Mario</td>
+            </tr>
+            <tr>
+              <td>Level Design</td>
+              <td>Shapes player experience</td>
+              <td>World 1-1 in Super Mario Bros</td>
+            </tr>
+            <tr>
+              <td>Player Feedback</td>
+              <td>Makes actions feel satisfying</td>
+              <td>Screen shake on explosion</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span class="year"></span> Game Dev Guide</span>
+    </footer>
+    <script src="script.js"></script>
+    <script>document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());</script>
+  </body>
+</html>

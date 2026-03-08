@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tools | Game Dev Guide</title>
+    <meta name="description" content="Explore the essential tools for game development: version control, art pipelines, audio tools, IDEs, and build systems." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="header-box">
+        <a href="index.html" class="logo-link">Game Dev Guide</a>
+      </div>
+      <nav class="nav-box" aria-label="Primary Navigation">
+        <a href="concepts.html">Concepts</a>
+        <a href="tools.html" class="active">Tools</a>
+        <a href="engines.html">Engines</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="index.html#resources">Resources</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <h1>Game Dev Tools</h1>
+        <p class="page-subtitle">The software, pipelines, and utilities that professional and indie developers use every day.</p>
+      </section>
+
+      <section class="section">
+        <h2>Version Control</h2>
+        <p>Version control is non-negotiable in game development. It lets you track changes, collaborate with a team, and roll back mistakes.</p>
+        <ol>
+          <li><strong>Git</strong> — Distributed version control system</li>
+          <li><strong>GitHub / GitLab</strong> — Remote hosting and collaboration</li>
+          <li><strong>Git LFS</strong> — Large File Storage for binary assets (textures, audio)</li>
+        </ol>
+        <img
+          src="https://logicsimplified.com/newgames/wp-content/uploads/2015/06/CrRKbXTVMAAwXNT.jpg"
+          alt="Game development tools icons collage"
+        />
+      </section>
+
+      <section class="section">
+        <h2>Art & Asset Tools</h2>
+        <p>Your game's visuals start here. Whether you're making 2D sprites or 3D models, these tools cover the full pipeline.</p>
+        <ul>
+          <li><strong>Blender</strong> — Free, open-source 3D modeling and animation</li>
+          <li><strong>Aseprite</strong> — Pixel art and sprite animation</li>
+          <li><strong>Photoshop / GIMP</strong> — Texture creation and image editing</li>
+          <li><strong>Substance Painter</strong> — 3D texture painting for AAA-quality assets</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Audio Tools</h2>
+        <p>Good audio can make a mediocre game feel polished. Here are the tools game developers rely on:</p>
+        <ul>
+          <li><strong>Audacity</strong> — Free audio recording and editing</li>
+          <li><strong>FMOD / Wwise</strong> — Advanced in-game audio middleware</li>
+          <li><strong>GarageBand / FL Studio</strong> — Music composition and soundtrack creation</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Code Editors & IDEs</h2>
+        <p>Your choice of editor significantly affects productivity and debugging speed.</p>
+        <ol>
+          <li><strong>VS Code</strong> — Lightweight, extensible, free (most popular)</li>
+          <li><strong>JetBrains Rider</strong> — Best for C# / Unity development</li>
+          <li><strong>Visual Studio</strong> — Full-featured IDE for Windows/C++</li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2>Tools Comparison</h2>
+        <table>
+          <caption>Game Development Tools by Category</caption>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Tool</th>
+              <th>Cost</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Version Control</td>
+              <td>Git + GitHub</td>
+              <td>Free</td>
+              <td>All projects</td>
+            </tr>
+            <tr>
+              <td>3D Modeling</td>
+              <td>Blender</td>
+              <td>Free</td>
+              <td>Indie / Pro</td>
+            </tr>
+            <tr>
+              <td>Pixel Art</td>
+              <td>Aseprite</td>
+              <td>~$20</td>
+              <td>2D games</td>
+            </tr>
+            <tr>
+              <td>Audio</td>
+              <td>FMOD</td>
+              <td>Free (indie)</td>
+              <td>Dynamic audio</td>
+            </tr>
+            <tr>
+              <td>Code Editor</td>
+              <td>VS Code</td>
+              <td>Free</td>
+              <td>All languages</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>External Resources</h2>
+        <ul>
+          <li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git Official Documentation</a></li>
+          <li><a href="https://www.blender.org/" target="_blank" rel="noopener">Blender Official Site</a></li>
+          <li><a href="https://www.fmod.com/" target="_blank" rel="noopener">FMOD Audio Middleware</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span class="year"></span> Game Dev Guide</span>
+    </footer>
+    <script src="script.js"></script>
+    <script>document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());</script>
+  </body>
+</html>
