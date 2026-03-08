@@ -35,6 +35,10 @@ body {
   text-decoration: none;
 }
 
+.logo-link img {
+  display: block;
+}
+
 .nav-box {
   position: absolute;
   right: 36px;
