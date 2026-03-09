@@ -212,6 +212,12 @@ img {
   border-radius: 6px;
 }
 
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .logo-link img {
   display: block;
   height: 60px;
