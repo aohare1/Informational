@@ -37,6 +37,8 @@ body {
 
 .logo-link img {
   display: block;
+  height: 60px;
+  width: auto;
 }
 
 .nav-box {
