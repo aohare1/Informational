@@ -212,6 +212,14 @@ img {
   border-radius: 6px;
 }
 
+.logo-link img {
+  display: block;
+  height: 60px;
+  width: auto;
+  margin-top: 0;
+  border-radius: 0;
+}
+
 /* ── Links in sections ── */
 .section a {
   color: var(--accent);
